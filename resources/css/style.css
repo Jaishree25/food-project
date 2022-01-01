@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    background-color: white;
+    color: #555;
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility; /*with help of this property the speed of the webpage increases and also by doing this the content of our webpage will become well spaced */
+    overflow-x: hidden;
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url("img/hero.jpg"); /*here we use linear gradient as we want your background image to appear a little darker so that our text can be easily readable to others,linear gradient property works with two or more colors and when two colors are specified a smooth transition will show between those colors*/
+    background-attachment: fixed;
+    height: 100vh;
+    background-size: cover; /* as we want image will cover the whole background, so that is why we put this property*/
+    background-position:center ;
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); /*this allows to give a 2d or 3d transformation to an element on a webpage also it allows you to rotate, scale, move, skew etc elements on a webpage */
+
+}
+
+h1{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 240%;
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+ .btn:link,
+ .btn:visited,
+ input[type="submit"]
+ {
+     display: inline-block; /*In inline block two elemnts are present in a row but they have default margin and padding between them in this case the two elements are the two anchor tags*/
+     padding: 10px, 30px;
+     text-decoration: none;
+     font-weight: 300;
+     transition: background-color 0.2s , border 0.2s , color 0.2s; 
+ }
+
+ .btn-full:link,
+ .btn-full:visited,
+ input[type="submit"]
+ {
+     background-color: orange;
+     color: white;
+     border: 1px solid orange;
+     margin-right: 25px;
+     padding: 9px;
+     border-radius: 200px;
+ }
+
+ .btn-ghost:link, /* here we want ki jab link visited ho that is visited and jab link unvisited ho that is link toh same hi property of css show ho thats why humne isse aise likha hai*/
+ .btn-ghost:visited
+ {
+     border: 1px solid orange;
+     color: orange;
+     border-radius: 200px;
+     padding: 9px;
+ }
+
+ .btn:hover,
+ .btn:active,
+ input[type="submit"]
+ {
+    background-color: #cf6d17;
+ }
+
+ .btn-ghost:hover,
+ .btn-ghost:active
+ {
+    color: white;
+    border:1px solid #cf6d17 ;
+ }
+
+ .btn-full:hover,
+ .btn-full:active,
+ input[type="submit"]
+ {
+    border: 1px solid #cf6d17 ;
+ }
+
+ .logo{
+     height: 100px;
+     width: auto;
+     float: left;
+     margin-top: 20px;
+     margin-left: 90px;
+
+ }
+
+ .main-nav{
+     float:right;
+     list-style: none;
+    margin-left: 200px;
+     /* margin-top: 55px;     */
+ } 
+
+ .main-nav li{ /* means inside main-nav class saare li ko style kar rahe hai yaha par */
+
+    display: inline-block;
+    margin-left: 150px;
+    margin-top: 50px;
+     /* margin-left: 240px; */
+ }
+
+ .main-nav li a
+ {
+    color: white ;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%; /* 90% means when you are using this to increase the size of parent class than the size of child class also increases */
+ }
+
+ .main-nav li :hover
+ {
+   border-bottom: 2px solid #e67e22;
+   transition: border-bottom 0.2s;
+ }
+
+ section{
+    padding: 88px 0; 
+ }
+
+ h2{
+     font-weight: 300;
+     text-transform: uppercase;
+     font-size: 250%;
+     word-spacing: 2px;
+     text-align: center;
+     margin-bottom: 30px;
+     letter-spacing: 1px;
+ }
+
+ h2:after {
+   display: block;
+   height: 2px;
+   background-color: orange;
+   content: "";
+   width: 100px;
+   margin: 0 auto;
+   margin-top: 30px; 
+ }
+
+ .long-copy{
+    line-height: 145%;
+    width:70%;
+    margin-left: 15%;
+ }
+
+ .col{
+     padding: 1%;
+ }
+
+ h4{
+     font-weight: 300;
+     text-transform: uppercase;
+     font-size: 120%;
+     margin-bottom: 15px;
+ }
+
+ .col p{
+     font-size: 90%;
+     line-height: 145%;
+ }
+
+ .icon-big{
+     font-size: 350%;
+     display: block;
+     color: orange;
+     margin-bottom: 10px;
+ }
+
+ .meals-showcase{
+     list-style:none;
+     width:100%;
+ }
+
+ .meals-showcase li{
+     display: block;
+     float: left;
+     width: 25%;
+ }
+ .meal-photo{
+     width:100%;
+     margin: 0;
+     background-color: black;
+     overflow: hidden;
+     transition: transform 0.5s, opacity 0.5s ;
+ }
+
+ .meal-photo img{
+     width:100%;
+     height: auto;
+     transform: scale(1.15);
+     /*scale property means the image will zoom and the actual size of image will become 115% of original image */
+    opacity: 0.7;
+ }
+
+ .works-step{
+        margin-bottom: 50px;
+        margin-right:25px;
+ }
+
+ .meal-photo img:hover{
+        transform:scale(1.03);
+        opacity:1;
+ }
+
+ .section-meals{
+     padding:0;
+ }
+
+ .section-features .long-copy{
+    margin-bottom: 60px; 
+ }
+
+ .c:first-child{
+  text-align: center;
+  padding-right: 3%;
+  margin-top: 30px;
+ }
+
+ .c:last-child{
+   padding-left: 3%;
+   margin-top: 70px;  
+ }
+
+ .works-step div{
+    color:orange;
+    border:4px solid orange;
+    display:inline-block;
+    border-radius:50%;
+    height:55px;
+    width:55px;
+    text-align:center;
+    padding:5px;
+    float:left;
+    font-size:150%;
+    margin-right:25px;  
+ }
+ .btn-app{
+     height:50px;
+     width:auto;    
+ }
+
+ .works-step :last-of-type{
+     margin-bottom:80px;
+ }
+
+ .clearfix{zoom:1}
+ .clearfix::after{
+     content:'.';
+     clear:both;
+     display:block;
+     height:0;
+     visibility:hidden;
+ }
+
+ .b img{
+     width: 100%;
+     height: auto;
+     margin-bottom: 15px;    
+ }
+
+ .city-feature{
+     margin-bottom: 5px;
+    
+ }
+
+ .s{
+     display: inline-block;
+     width: 30px;
+     text-align: center;
+     color: orange;
+     font-size: 120%;
+     line-height: 120%;
+     vertical-align: middle;
+     margin-top: -5px;
+     margin-right: 10px;
+ }
+
+ blockquote{
+   padding: 2%;
+   font-style: italic;
+   line-height: 145%;
+   margin-top: 40px; 
+ }
+
+ cite{
+     font-size: 90%;
+     display: block;
+     margin-top: 25px;
+ } 
+
+cite img{
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.section-plans{
+    background-color: #f4f4f4;
+}
+
+ .section-cities{
+     background-color: #f4f4f4;
+ }
+
+ .plan-box{
+     background-color: white;
+     border-radius: 5px;
+     width: 90%;
+     margin-left: 5%;
+ }
+
+ .plan-box div{
+     padding: 15px;
+     border-bottom: 1px solid #e8e8e8;   
+ }
+
+ .plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color:orange;
+ }
+
+ .plan-price-meal{
+     font-size: 80%;
+ }
+
+ .plan-box ul{
+     list-style: none;
+ }
+
+ .plan-box ul li{
+     padding: 5px 0;
+ }
+
+ .contact-form{
+     width: 60%;
+     margin: 0 auto;
+ }
+
+ input[type="text"],
+ input[type="email"],
+ select,
+ input[type="password"],
+ textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border:1px solid #ccc;
+ }
+
+ textarea{
+     height: 100%;
+ }
+
+ input [type="checkbox"]{
+     margin: 10px 5px 10px 0;
+ }
+
+ input[type="submit"]{
+     margin-top: 10px;
+ }
+
+ #i{
+     margin-top: 9px;
+ }
+
+ #u{
+     margin-top: 10px;
+ }
+
+ footer{
+     background-color: #333;
+     font-size: 80%;
+     padding: 50px;
+     margin-bottom: none;
+ }
+
+ .footer-nav{
+     list-style: none;
+     float: left;
+ }
+
+ .social-links{
+     list-style: none;
+     float: right;
+ }
+
+.footer-nav li,
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    text-decoration: none;
+    border:0;
+    color: #888;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:hover{
+   color: #ddd;
+}
+
+footer p{
+    color: #888;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 20px;
+}
+
+.fb:hover{
+  color: #3b5998;  
+}
+
+.twi:hover{
+ color:#00aced;
+}
+
+.goo:hover{
+ color: #dd4b39;
+}
+
+.ins:hover{
+ color: #517;
+}
+
+.social-links li a:link,
+.social-links li a:visited{
+  font-size: 200%;
+}
+
